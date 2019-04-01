@@ -1,4 +1,4 @@
-package cdpaulus.posdoctor;
+package cdpaulus.medcontrol;
 
 import org.junit.Test;
 

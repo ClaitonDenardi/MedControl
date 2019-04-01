@@ -1,4 +1,4 @@
-package cdpaulus.posdoctor;
+package cdpaulus.medcontrol;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

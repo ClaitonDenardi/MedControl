@@ -1,4 +1,4 @@
-package cdpaulus.posdoctor;
+package cdpaulus.medcontrol;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

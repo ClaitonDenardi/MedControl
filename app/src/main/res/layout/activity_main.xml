@@ -12,30 +12,30 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/main" />
-
+    
     <Button
         android:id="@+id/btn_adicionar_medicamento"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="#00bcd4"
-        android:fontFamily="casual"
-        android:text="Adicionar medicamento"
+        android:layout_marginTop="20dp"
+        android:text="Adicionar Medicamento"
         android:textColor="#e91e63"
         android:textSize="23dp"
+        android:layout_gravity="center"
+        android:layout_width="340dp"
+        android:layout_height="60dp"
+        android:background="@drawable/buttonshape"
         />
-
 
     <Button
         android:id="@+id/btn_listar_medicamento"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:background="#00bcd4"
-        android:fontFamily="casual"
         android:text="Listar medicamentos"
         android:textColor="#e91e63"
-        android:textSize="23dp" />
+        android:textSize="23dp"
+        android:layout_gravity="center"
+        android:layout_width="340dp"
+        android:layout_height="60dp"
+        android:background="@drawable/buttonshape"
+        />
 
 
 
