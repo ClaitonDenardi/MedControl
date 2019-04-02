@@ -1,14 +1,14 @@
 package cdpaulus.medcontrol;
 
+import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.view.View.OnClickListener;
 
-public class AdicionarMedicamento extends AppCompatActivity{
+public class AdicionarMedicamento extends Activity {
 
     public static TextView resultExtView;
     Button scan_btn;
@@ -19,15 +19,13 @@ public class AdicionarMedicamento extends AppCompatActivity{
         setContentView(R.layout.activity_adicionar_medicamento);
 
         resultExtView = (TextView)findViewById(R.id.btn_scan);
-        scan_btn = (Button) findViewById(new OnClickListener() {
+        scan_btn.setOnClickListener(new View.OnClickListener() {
+
             @Override
-            public void onClick(View view){
-                startActivity(new Intent(getApplicationContext(), ScanCodeActivity.class));
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ScanCodeActivity.class);
+                startActivity(intent);
             }
         });
-    }
-
-    private Object findViewById(OnClickListener onClickListener) {
-
     }
 }
