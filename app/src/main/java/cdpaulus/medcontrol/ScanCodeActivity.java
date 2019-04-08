@@ -22,7 +22,6 @@ public class ScanCodeActivity extends AppCompatActivity implements ZXingScannerV
     public void handleResult(Result result) {
         AdicionarMedicamento.resultExtView.setText(result.getText());
         onBackPressed();
-
     }
 
     @Override

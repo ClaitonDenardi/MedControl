@@ -16,6 +16,7 @@ public class AdicionarMedicamento extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adicionar_medicamento);
+        resultExtView = findViewById(R.id.result_text);
         scan_btn = findViewById(R.id.btn_scan);
         scan_btn.setOnClickListener(new View.OnClickListener() {
             @Override
