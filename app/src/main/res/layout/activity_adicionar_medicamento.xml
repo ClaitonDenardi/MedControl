@@ -11,24 +11,48 @@
 
 
     <Button
-        android:layout_marginTop="280dp"
-        android:text="Ler"
-        android:textColor="#e91e63"
-        android:textSize="23sp"
-        android:layout_gravity="center"
+        android:id="@+id/btn_scan"
         android:layout_width="340dp"
         android:layout_height="60dp"
-        android:id="@+id/btn_scan"
-        android:background="@drawable/buttonshape"/>
+        android:layout_gravity="center"
+        android:layout_marginTop="230dp"
+        android:background="@drawable/buttonshape"
+        android:text="Ler"
+        android:textColor="#e91e63"
+        android:textSize="23sp" />
 
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Result"
+        android:text="Código de Barras"
         android:gravity="center"
         android:textSize="22sp"
         android:layout_marginTop="20dp"
         android:id="@+id/result_text"/>
+
+    <Spinner
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="22sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="135dp"
+        android:background="@drawable/buttonshape"
+        android:id="@+id/select_hora"
+        />
+
+    <Button
+        android:id="@+id/btn_inserirMed"
+        android:layout_width="340dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/buttonshape"
+        android:text="Inserir"
+        android:textColor="#e91e63"
+        android:textSize="23sp" />
+
+
 
 </LinearLayout>

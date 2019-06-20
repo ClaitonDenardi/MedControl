@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">PosDoctor</string>
+
+    <string-array name="horas">
+        <item>3h</item>
+        <item>6h</item>
+        <item>8h</item>
+        <item>12h</item>
+        <item>24h</item>
+    </string-array>>
 </resources>
