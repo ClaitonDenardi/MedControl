@@ -61,12 +61,14 @@ public class AdicionarMedicamento extends Activity implements AdapterView.OnItem
     }
 
     private void startAlarm() {
-        int i= 1;
+        int i= 3;
+        TextView t = (TextView) findViewById(R.id.result_text);
         Intent intent= new Intent(this, Receiver.class);
+        intent.putExtra("cod", t.getText());
         PendingIntent pi= PendingIntent.getBroadcast(this,1,intent,0);
         AlarmManager am= (AlarmManager)getSystemService(ALARM_SERVICE);
         am.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis()+(i*1000), pi);
-        Toast.makeText(this, "Tome seu remédio", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Alarme adicionado!", Toast.LENGTH_LONG).show();
 
     }
 

@@ -6,17 +6,20 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DadosOpenHelper extends SQLiteOpenHelper {
 
-    public DadosOpenHelper(Context context) {
-        super(context, "dados", null, 1);
+    DadosOpenHelper(Context context) {
+        super(context, "medcontrol", null, 12);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-            db.execSQL(ScriptBD.getCreateTable());
+        db.execSQL("CREATE TABLE " + "medicamentos_tbl" + " ("
+                + "codbarras" + " TEXT primary key not null, "
+                + "nome" +" TEXT not null)");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        db.execSQL("drop table if exists " + "medicamentos_tbl");
+        onCreate(db);
     }
 }

@@ -5,6 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
+import cdpaulus.medcontrol.database.BancoController;
 
 public class MainActivity extends AppCompatActivity {
     private Button btn, btn2;
@@ -26,6 +29,11 @@ public class MainActivity extends AppCompatActivity {
                 OpenActivityListar();
             }
         });
+        BancoController bc = new BancoController(getBaseContext());
+        bc.insereDados("7898944008304", "remedioxxxxx");
+        bc.insereDados("7898654490031", "bokinha");
+
+        // Toast.makeText(getApplicationContext(), resultado, Toast.LENGTH_LONG).show();
 
     }
     private void OpenActivityAdicionar(){

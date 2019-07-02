@@ -2,6 +2,7 @@
     <string name="app_name">PosDoctor</string>
 
     <string-array name="horas">
+        <item>5s</item>>
         <item>3h</item>
         <item>6h</item>
         <item>8h</item>
