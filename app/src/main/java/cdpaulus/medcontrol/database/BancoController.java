@@ -45,8 +45,21 @@ public class BancoController {
     public Cursor carregaDados(String cod){
         Cursor cursor;
         db = banco.getReadableDatabase();
-        String selectQuery = "SELECT * from medicamentos_tbl where codbarras = ?";
+        String selectQuery = "SELECT nome from medicamentos_tbl where codbarras = ?";
         cursor = db.rawQuery(selectQuery, new String[] { cod });
+        if(cursor != null){
+            cursor.moveToFirst();
+        }
+        db.close();
+        return cursor;
+    }
+
+
+    public Cursor findAll(){
+        Cursor cursor;
+        db = banco.getReadableDatabase();
+        String selectQuery = "SELECT nome from medicamentos_tbl";
+        cursor = db.rawQuery(selectQuery, null);
         if(cursor != null){
             cursor.moveToFirst();
         }

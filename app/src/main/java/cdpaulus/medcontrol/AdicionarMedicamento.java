@@ -5,6 +5,7 @@ import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -57,19 +58,26 @@ public class AdicionarMedicamento extends Activity implements AdapterView.OnItem
 
     @Override
     public void onClick(View v) {
-        startAlarm();
+        TextView tv = findViewById(R.id.result_text);
+        String cod = tv.getText().toString();
+        try {
+            Integer.parseInt(String.valueOf(cod.charAt(0)));
+            startAlarm();
+        } catch (Exception e) {
+            Toast.makeText(this, "Leia o código de barras", Toast.LENGTH_SHORT).show();
+
+        }
     }
 
     private void startAlarm() {
         int i= 3;
-        TextView t = (TextView) findViewById(R.id.result_text);
+        TextView codB = (TextView) findViewById(R.id.result_text);
         Intent intent= new Intent(this, Receiver.class);
-        intent.putExtra("cod", t.getText());
-        PendingIntent pi= PendingIntent.getBroadcast(this,1,intent,0);
+        intent.putExtra("cod", codB.getText().toString());
+        PendingIntent pi= PendingIntent.getBroadcast(this,1,intent,PendingIntent.FLAG_CANCEL_CURRENT);
         AlarmManager am= (AlarmManager)getSystemService(ALARM_SERVICE);
         am.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis()+(i*1000), pi);
         Toast.makeText(this, "Alarme adicionado!", Toast.LENGTH_LONG).show();
-
     }
 
 

@@ -31,7 +31,9 @@ public class MainActivity extends AppCompatActivity {
         });
         BancoController bc = new BancoController(getBaseContext());
         bc.insereDados("7898944008304", "remedioxxxxx");
+        bc.insereDados("7898446730079", "LIMPADERO");
         bc.insereDados("7898654490031", "bokinha");
+
 
         // Toast.makeText(getApplicationContext(), resultado, Toast.LENGTH_LONG).show();
 

@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.media.MediaPlayer;
+import android.util.Log;
 import android.widget.Toast;
 
 import cdpaulus.medcontrol.database.BancoController;
@@ -18,12 +19,9 @@ public class Receiver extends BroadcastReceiver {
         mp=MediaPlayer.create(context, DEFAULT_ALARM_ALERT_URI);
         mp.start();
         String cod = intent.getExtras().getString("cod");
-        Toast.makeText(context, cod, Toast.LENGTH_LONG).show();
-
         BancoController bc = new BancoController(context);
         Cursor cursor = bc.carregaDados(cod);
-        cursor.moveToFirst();
-        String result = cursor.getString(1);
+        String result = cursor.getString(cursor.getColumnIndex("nome"));
         Toast.makeText(context, result, Toast.LENGTH_LONG).show();
 
     }
