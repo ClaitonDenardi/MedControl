@@ -30,9 +30,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         BancoController bc = new BancoController(getBaseContext());
-        bc.insereDados("7898944008304", "remedioxxxxx");
-        bc.insereDados("7898446730079", "LIMPADERO");
-        bc.insereDados("7898654490031", "bokinha");
+        bc.insereDados("7898158693129", "Benatux Pastilhas");
+        bc.insereDados("7891058001155", "Novalgina");
+        bc.insereDados("7891268104028", "Feldene SL");
 
 
         // Toast.makeText(getApplicationContext(), resultado, Toast.LENGTH_LONG).show();

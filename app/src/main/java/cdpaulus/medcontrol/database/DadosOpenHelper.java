@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DadosOpenHelper extends SQLiteOpenHelper {
 
     DadosOpenHelper(Context context) {
-        super(context, "medcontrol", null, 12);
+        super(context, "medcontrol", null, 13);
     }
 
     @Override

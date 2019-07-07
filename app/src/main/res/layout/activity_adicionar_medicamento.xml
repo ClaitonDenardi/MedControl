@@ -2,20 +2,28 @@
 
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical"
-        tools:context="cdpaulus.medcontrol.AdicionarMedicamento">
+        android:background="@color/fundo"
+        tools:context="cdpaulus.medcontrol.AdicionarMedicamento"
+    >
 
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginLeft="60dp"
+        android:src="@drawable/medcontrol"
+        />
 
     <Button
         android:id="@+id/btn_scan"
         android:layout_width="340dp"
         android:layout_height="60dp"
         android:layout_gravity="center"
-        android:layout_marginTop="230dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/buttonshape"
         android:text="Ler"
         android:textColor="#e91e63"
